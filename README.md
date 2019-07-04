@@ -121,3 +121,50 @@ When running the flow tests, if you get a Quasar instrumention error then add:
 ```-ea -javaagent:lib/quasar.jar```
 
 to the VM args property in the default run configuration for JUnit in IntelliJ.
+
+## Build Project
+```bash
+cd /Users/reza/projects/blockbuilder
+./gradlew deployNodes
+
+```
+## Running each Node
+```bash
+# Open different terminal to run the code
+
+# Notary
+cd /Users/reza/projects/blockbuilder/kotlin-source/build/nodes/Notary
+java -jar corda.jar
+
+# Node A
+cd /Users/reza/projects/blockbuilder/kotlin-source/build/nodes/ParticipantA
+java -jar corda.jar
+
+# Node B
+cd /Users/reza/projects/blockbuilder/kotlin-source/build/nodes/ParticipantB
+java -jar corda.jar
+
+# Node C
+cd /Users/reza/projects/blockbuilder/kotlin-source/build/nodes/ParticipantC
+java -jar corda.jar
+
+```
+
+
+## Starting Web Servers
+
+```bash
+
+# Node A
+cd /Users/reza/projects/blockbuilder/kotlin-source/build/nodes/ParticipantA
+java -Dname=ParticipantA -jar corda-webserver.jar
+
+# Node B
+cd /Users/reza/projects/blockbuilder/kotlin-source/build/nodes/ParticipantB
+java -Dname=ParticipantB -jar corda-webserver.jar
+
+# Node C
+cd /Users/reza/projects/blockbuilder/kotlin-source/build/nodes/ParticipantC
+java -Dname=ParticipantC -jar corda-webserver.jar
+
+```
