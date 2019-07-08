@@ -1,4 +1,4 @@
-# BB Solutions Hub
+# Corda IOU app with Web UI
 
 
 # Setup
